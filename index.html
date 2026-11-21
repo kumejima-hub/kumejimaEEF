@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotel Guide</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f5f5f5;color:#333;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif}
+header{background:#fff;padding:28px 20px 22px;text-align:center;border-bottom:1px solid #eee}
+header h1{margin:0;font-size:25px;letter-spacing:.08em}
+header p{margin:8px 0 0;color:#777;font-size:13px}
+.container{max-width:560px;margin:auto;padding:16px}
+.card{display:flex;align-items:center;background:#fff;border-radius:14px;margin:12px 0;padding:15px;text-decoration:none;color:#333;box-shadow:0 2px 10px rgba(0,0,0,.06);cursor:pointer}
+.icon{width:52px;height:52px;border-radius:12px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:27px;margin-right:14px}
+.card h2{font-size:17px;margin:0 0 4px}
+.card p{font-size:12px;color:#777;margin:0}
+.arrow{margin-left:auto;color:#aaa;font-size:22px}
+.notice{background:#fff;border-radius:14px;padding:16px;margin-top:20px;font-size:13px;line-height:1.8}
+footer{text-align:center;color:#999;font-size:11px;padding:25px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);padding:18px;z-index:10}
+.modal.open{display:flex;align-items:center;justify-content:center}
+.panel{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:90vh;overflow:auto}
+.panel img{display:block;width:100%;height:210px;object-fit:cover;border-radius:16px 16px 0 0}
+.panel-content{padding:20px}
+.panel h2{margin:0 0 12px}
+.panel p{line-height:1.8;font-size:14px}
+.close{float:right;border:0;background:#eee;border-radius:50%;width:34px;height:34px;font-size:18px}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏨 HOTEL GUIDE</h1>
+  <p>ホテル館内のご案内</p>
+</header>
+
+<main class="container">
+  <div class="card" onclick="openInfo('room')">
+    <div class="icon">🛏️</div><div><h2>客室</h2><p>客室設備・アメニティ・ご利用方法</p></div><div class="arrow">›</div>
+  </div>
+  <div class="card" onclick="openInfo('restaurant')">
+    <div class="icon">🍽️</div><div><h2>レストラン</h2><p>朝食・夕食・営業時間・場所</p></div><div class="arrow">›</div>
+  </div>
+  <div class="card" onclick="openInfo('bath')">
+    <div class="icon">🛁</div><div><h2>大浴場</h2><p>営業時間・場所・ご利用案内</p></div><div class="arrow">›</div>
+  </div>
+  <div class="card" onclick="openInfo('map')">
+    <div class="icon">📍</div><div><h2>館内案内</h2><p>フロア・施設の場所</p></div><div class="arrow">›</div>
+  </div>
+  <div class="card" onclick="openInfo('emergency')">
+    <div class="icon">🚨</div><div><h2>緊急時</h2><p>避難経路・非常口・緊急連絡先</p></div><div class="arrow">›</div>
+  </div>
+
+  <div class="notice">
+    <strong>ご案内</strong><br>
+    ご不明な点がございましたら、フロントまでお気軽にお問い合わせください。
+  </div>
+</main>
+<footer>HOTEL GUIDE</footer>
+
+<div class="modal" id="modal" onclick="closeIfOutside(event)">
+  <div class="panel">
+    <img id="infoImage" alt="">
+    <div class="panel-content">
+      <button class="close" onclick="closeModal()">×</button>
+      <h2 id="infoTitle"></h2>
+      <p id="infoText"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+const data = {
+ room: {
+  title:"🛏️ 客室",
+  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e8e0d6"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665c54">客室写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#776d65">ROOM PHOTO</text></svg>`),
+  text:"客室にはテレビ、冷蔵庫、電気ケトルなどを備えています。アメニティの詳細は客室内のご案内をご確認ください。"
+ },
+ restaurant: {
+  title:"🍽️ レストラン",
+  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e6ded2"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665c54">レストラン写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#776d65">RESTAURANT PHOTO</text></svg>`),
+  text:"朝食：7:00〜10:00（最終入場 9:30）\\n場所：1階レストラン。営業時間・内容はホテルの最新案内をご確認ください。"
+ },
+ bath: {
+  title:"🛁 大浴場",
+  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#dce8ea"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#52686d">大浴場写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#61777c">BATH PHOTO</text></svg>`),
+  text:"営業時間：15:00〜25:00。場所：2階。タオルは客室からお持ちください。"
+ },
+ map: {
+  title:"📍 館内案内",
+  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e7e4dc"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#68655d">館内マップ</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#77736a">FLOOR MAP</text></svg>`),
+  text:"フロント：1階。レストラン：1階。大浴場：2階。実際の施設情報に合わせて、このページの内容を変更できます。"
+ },
+ emergency: {
+  title:"🚨 緊急時",
+  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#eee8e5"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665d59">避難経路写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#77706b">EMERGENCY ROUTE</text></svg>`),
+  text:"火災・地震などの緊急時は、館内放送および避難誘導に従ってください。非常口・避難経路は客室内の案内でもご確認ください。"
+ }
+};
+
+function openInfo(key){
+ const d=data[key];
+ document.getElementById('infoTitle').textContent=d.title;
+ document.getElementById('infoImage').src=d.image;
+ document.getElementById('infoText').innerHTML=d.text.replace(/\n/g,'<br>');
+ document.getElementById('modal').classList.add('open');
+}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+function closeIfOutside(e){if(e.target.id==='modal') closeModal()}
+</script>
+</body>
+</html>
