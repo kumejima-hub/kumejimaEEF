@@ -1,112 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Guide</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>EN RESORT EEF Beach Hotel | Hotel Guide</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f5f5f5;color:#333;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif}
-header{background:#fff;padding:28px 20px 22px;text-align:center;border-bottom:1px solid #eee}
-header h1{margin:0;font-size:25px;letter-spacing:.08em}
-header p{margin:8px 0 0;color:#777;font-size:13px}
-.container{max-width:560px;margin:auto;padding:16px}
-.card{display:flex;align-items:center;background:#fff;border-radius:14px;margin:12px 0;padding:15px;text-decoration:none;color:#333;box-shadow:0 2px 10px rgba(0,0,0,.06);cursor:pointer}
-.icon{width:52px;height:52px;border-radius:12px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:27px;margin-right:14px}
-.card h2{font-size:17px;margin:0 0 4px}
-.card p{font-size:12px;color:#777;margin:0}
-.arrow{margin-left:auto;color:#aaa;font-size:22px}
-.notice{background:#fff;border-radius:14px;padding:16px;margin-top:20px;font-size:13px;line-height:1.8}
-footer{text-align:center;color:#999;font-size:11px;padding:25px}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.55);padding:18px;z-index:10}
-.modal.open{display:flex;align-items:center;justify-content:center}
-.panel{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:90vh;overflow:auto}
-.panel img{display:block;width:100%;height:210px;object-fit:cover;border-radius:16px 16px 0 0}
-.panel-content{padding:20px}
-.panel h2{margin:0 0 12px}
-.panel p{line-height:1.8;font-size:14px}
-.close{float:right;border:0;background:#eee;border-radius:50%;width:34px;height:34px;font-size:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f6f6f4;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 15px}
+header{background:#fff;text-align:center;padding:30px 15px 25px;border-bottom:1px solid #e7e7e7}
+h1{font-family:Georgia,serif;font-size:24px;margin:0;letter-spacing:.02em}.sub{font-size:12px;color:#777}
+.welcome{font-family:Georgia,serif;font-size:21px;margin-top:12px}
+.notice{margin:16px 0;background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:15px;font-size:13px}
+.group-title{font-size:14px;font-weight:700;margin:22px 3px 9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:15px;padding:15px;min-height:88px;box-shadow:0 2px 8px #00000008}
+.card:active{transform:scale(.98)}.emoji{font-size:25px}.card strong{display:block;font-size:14px}.card small{display:block;color:#777;font-size:10px}
+.section{background:#fff;border:1px solid #e7e7e7;border-radius:17px;margin:12px 0;padding:18px;scroll-margin-top:10px}
+.section h2{font-size:19px;margin:0 0 11px}.section h3{font-size:14px;margin:16px 0 5px}
+.section p,.section li{font-size:13px}.time{display:inline-block;background:#f0f0ed;border-radius:8px;padding:4px 8px;font-size:12px;font-weight:700;margin:2px 3px 6px 0}
+.btn{display:block;background:#f1f1ef;border-radius:10px;padding:10px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
+.phone{display:block;background:#222;color:#fff;border-radius:10px;padding:10px;text-align:center;margin-top:8px}
+ul{padding-left:20px;margin:7px 0}.key{background:#f2f2f2;border-radius:10px;padding:13px;text-align:center;margin:8px 0;font-size:13px}
+.ship{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
+footer{text-align:center;color:#999;font-size:11px;padding:25px 0 35px}
+@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.ship{grid-template-columns:1fr 1fr}.ship .price:last-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
 <header>
-  <h1>🏨 HOTEL GUIDE</h1>
-  <p>ホテル館内のご案内</p>
+<h1>EN RESORT EEF Beach Hotel</h1>
+<div class="sub">Kume Island, Okinawa</div>
+<div class="welcome">ようこそ</div>
 </header>
 
-<main class="container">
-  <div class="card" onclick="openInfo('room')">
-    <div class="icon">🛏️</div><div><h2>客室</h2><p>客室設備・アメニティ・ご利用方法</p></div><div class="arrow">›</div>
-  </div>
-  <div class="card" onclick="openInfo('restaurant')">
-    <div class="icon">🍽️</div><div><h2>レストラン</h2><p>朝食・夕食・営業時間・場所</p></div><div class="arrow">›</div>
-  </div>
-  <div class="card" onclick="openInfo('bath')">
-    <div class="icon">🛁</div><div><h2>大浴場</h2><p>営業時間・場所・ご利用案内</p></div><div class="arrow">›</div>
-  </div>
-  <div class="card" onclick="openInfo('map')">
-    <div class="icon">📍</div><div><h2>館内案内</h2><p>フロア・施設の場所</p></div><div class="arrow">›</div>
-  </div>
-  <div class="card" onclick="openInfo('emergency')">
-    <div class="icon">🚨</div><div><h2>緊急時</h2><p>避難経路・非常口・緊急連絡先</p></div><div class="arrow">›</div>
-  </div>
+<main class="wrap">
+<div class="notice"><b>HOTEL GUIDE</b><br>館内・交通・観光のご案内をスマートフォンでご覧いただけます。</div>
 
-  <div class="notice">
-    <strong>ご案内</strong><br>
-    ご不明な点がございましたら、フロントまでお気軽にお問い合わせください。
-  </div>
-</main>
-<footer>HOTEL GUIDE</footer>
-
-<div class="modal" id="modal" onclick="closeIfOutside(event)">
-  <div class="panel">
-    <img id="infoImage" alt="">
-    <div class="panel-content">
-      <button class="close" onclick="closeModal()">×</button>
-      <h2 id="infoTitle"></h2>
-      <p id="infoText"></p>
-    </div>
-  </div>
+<div class="group-title">宿泊中に確認</div>
+<div class="grid">
+<a class="card" href="#checkout"><div class="emoji">🕚</div><strong>チェックアウト</strong><small>11:00まで</small></a>
+<a class="card" href="#wifi"><div class="emoji">📶</div><strong>Wi-Fi</strong><small>SSID・パスワード</small></a>
+<a class="card" href="#breakfast"><div class="emoji">🍽️</div><strong>朝食・レストラン</strong><small>THE OCEAN DINING</small></a>
+<a class="card" href="#bath"><div class="emoji">🛁</div><strong>大浴場・展望風呂</strong><small>2F</small></a>
+<a class="card" href="#key"><div class="emoji">🔑</div><strong>カードキー</strong><small>大浴場・客室</small></a>
+<a class="card" href="#gown"><div class="emoji">👘</div><strong>ガウン・ルームスリッパ</strong><small>ご利用について</small></a>
+<a class="card" href="#eco"><div class="emoji">🌿</div><strong>エコ清掃</strong><small>清掃・タオル</small></a>
 </div>
 
-<script>
-const data = {
- room: {
-  title:"🛏️ 客室",
-  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e8e0d6"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665c54">客室写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#776d65">ROOM PHOTO</text></svg>`),
-  text:"客室にはテレビ、冷蔵庫、電気ケトルなどを備えています。アメニティの詳細は客室内のご案内をご確認ください。"
- },
- restaurant: {
-  title:"🍽️ レストラン",
-  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e6ded2"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665c54">レストラン写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#776d65">RESTAURANT PHOTO</text></svg>`),
-  text:"朝食：7:00〜10:00（最終入場 9:30）\\n場所：1階レストラン。営業時間・内容はホテルの最新案内をご確認ください。"
- },
- bath: {
-  title:"🛁 大浴場",
-  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#dce8ea"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#52686d">大浴場写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#61777c">BATH PHOTO</text></svg>`),
-  text:"営業時間：15:00〜25:00。場所：2階。タオルは客室からお持ちください。"
- },
- map: {
-  title:"📍 館内案内",
-  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#e7e4dc"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#68655d">館内マップ</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#77736a">FLOOR MAP</text></svg>`),
-  text:"フロント：1階。レストラン：1階。大浴場：2階。実際の施設情報に合わせて、このページの内容を変更できます。"
- },
- emergency: {
-  title:"🚨 緊急時",
-  image:"data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500"><rect width="100%" height="100%" fill="#eee8e5"/><text x="50%" y="48%" text-anchor="middle" font-size="48" fill="#665d59">避難経路写真</text><text x="50%" y="60%" text-anchor="middle" font-size="24" fill="#77706b">EMERGENCY ROUTE</text></svg>`),
-  text:"火災・地震などの緊急時は、館内放送および避難誘導に従ってください。非常口・避難経路は客室内の案内でもご確認ください。"
- }
-};
+<div class="group-title">館内サービス</div>
+<div class="grid">
+<a class="card" href="#shop"><div class="emoji">🏪</div><strong>売店</strong><small>7:00〜22:00</small></a>
+<a class="card" href="#laundry"><div class="emoji">🧺</div><strong>コインランドリー</strong><small>24時間</small></a>
+<a class="card" href="#fitness"><div class="emoji">🏋️</div><strong>フィットネス</strong><small>6:00〜21:00</small></a>
+<a class="card" href="#pool"><div class="emoji">🏊</div><strong>プール</strong><small>4月〜10月末</small></a>
+<a class="card" href="#shipping"><div class="emoji">📦</div><strong>宅急便・発送</strong><small>着払いのみ</small></a>
+</div>
 
-function openInfo(key){
- const d=data[key];
- document.getElementById('infoTitle').textContent=d.title;
- document.getElementById('infoImage').src=d.image;
- document.getElementById('infoText').innerHTML=d.text.replace(/\n/g,'<br>');
- document.getElementById('modal').classList.add('open');
-}
-function closeModal(){document.getElementById('modal').classList.remove('open')}
-function closeIfOutside(e){if(e.target.id==='modal') closeModal()}
-</script>
+<div class="group-title">交通・移動</div>
+<div class="grid">
+<a class="card" href="#rentalcar"><div class="emoji">🚗</div><strong>レンタカー</strong><small>詳細は準備中</small></a>
+<a class="card" href="#bus"><div class="emoji">🚌</div><strong>島内バス</strong><small>公式情報</small></a>
+<a class="card" href="#taxi"><div class="emoji">🚕</div><strong>タクシー</strong><small>久米島タクシー</small></a>
+<a class="card" href="#cycle"><div class="emoji">🚲</div><strong>レンタサイクル</strong><small>8:00〜18:00</small></a>
+</div>
+
+<div class="group-title">観光・アクティビティ</div>
+<div class="grid">
+<a class="card" href="#hatone"><div class="emoji">🏝️</div><strong>はての浜観光</strong><small>4社</small></a>
+<a class="card" href="#activity"><div class="emoji">🌅</div><strong>ENカウンター</strong><small>サンライズウォーク</small></a>
+</div>
+
+<div class="group-title">館内案内</div>
+<div class="grid">
+<a class="card" href="#map"><div class="emoji">📍</div><strong>館内マップ</strong><small>館内案内図</small></a>
+</div>
+
+<section class="section" id="checkout"><h2>🕚 チェックアウト</h2><div class="time">11:00まで</div><p>レイトチェックアウトをご希望の際は、フロントスタッフへお尋ねください。</p></section>
+<section class="section" id="wifi"><h2>📶 Wi-Fi</h2><p><b>SSID：</b> enresort</p><p><b>PASS：</b> enhotels</p></section>
+<section class="section" id="breakfast"><h2>🍽️ お食事〈ご朝食〉</h2><div class="time">7:00〜9:00</div><p>最終入店 9:30／閉店</p><h3>THE OCEAN DINING</h3><p>レストランをご利用の際、ガウンとルームスリッパはご遠慮ください。</p><p>朝食は当日の追加も可能です。追加をご希望の方はフロントまでお越しくださいませ。</p></section>
+<section class="section" id="bath"><h2>🛁 2F 展望風呂</h2><div class="time">6:00〜9:00</div><div class="time">14:00〜22:00</div><p>バスタオルなどはお部屋からお持ちください。</p><p>貴重品はお持ちにならず、お部屋のセキュリティボックスをご利用ください。</p><p>ルームスリッパやガウンでのご利用はご遠慮ください。</p></section>
+<section class="section" id="key"><h2>🔑 カードキー</h2><div class="key">女性大浴場専用キー</div><div class="key">男性大浴場専用キー</div><div class="key">客室ルームキー</div><p>※カードキーの写真は後から掲載できます。</p></section>
+<section class="section" id="gown"><h2>👘 ガウン・ルームスリッパ</h2><p>ガウンは客室内にはご用意しておりません。ご利用をご希望のお客様は、フロントにて直接お受け取りください。</p><p><b>ガウン・ルームスリッパは、客室内のみでのご利用をお願いいたします。</b></p><p>レストラン・大浴場など館内施設をご利用の際は、ガウン・ルームスリッパのままでのご利用はご遠慮ください。</p></section>
+<section class="section" id="eco"><h2>🌿 エコ清掃</h2><h3>清掃が不要の場合</h3><p>使用済みのタオルやゴミ等を廊下にお出しください。スタッフが回収し、新しいタオルと、売店のアイスやオリオンの発泡酒と交換できるチケットをお部屋にお入れします。</p><h3>清掃が必要な場合</h3><p><b>朝9:00までに</b>、客室ドアの外側にある「清掃してください」のマグネットを表に貼ってください。</p></section>
+
+<section class="section" id="shop"><h2>🏪 売店</h2><div class="time">7:00〜22:00</div><p>お支払いはフロント横のレジへ。</p></section>
+<section class="section" id="laundry"><h2>🧺 コインランドリー</h2><div class="time">24時間</div><ul><li>洗濯機（8台）：1回300円</li><li>乾燥機（8台）：40分100円</li></ul><p>洗剤は自動投入されません。売店・フロントにて1個60円で販売しています。</p><p>脱水機のみの設置はございません。</p></section>
+<section class="section" id="fitness"><h2>🏋️ フィットネスジム</h2><div class="time">6:00〜21:00</div></section>
+<section class="section" id="pool"><h2>🏊 プール</h2><p><b>営業期間：4月〜10月末</b></p><p>天候等の状況により変更となる場合がございます。</p></section>
+
+<section class="section" id="shipping"><h2>📦 宅急便・発送</h2><h3>取扱い</h3><ul><li>クロネコヤマト</li><li>ゆうパック</li></ul><p><b>着払いのみ</b>となります。</p><h3>📦 発送用ダンボール</h3><div class="ship"><div class="price"><b>80サイズ</b><span>280円</span></div><div class="price"><b>100サイズ</b><span>320円</span></div><div class="price"><b>120サイズ</b><span>340円</span></div></div><p>箱代のお支払いは現金のみです。</p><h3>🤿 ダイビング機材</h3><p>ダイビング機材の場合は専用の送り状がありますので、スタッフまでお申し出ください。</p></section>
+
+<section class="section" id="rentalcar"><h2>🚗 レンタカー</h2><p>レンタカー情報は今後追加予定です。</p></section>
+
+<section class="section" id="bus"><h2>🚌 久米島島内バス</h2><p>久米島町公式の情報をご確認いただけます。</p>
+<a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus/timeline.html" target="_blank">🕐 バス時刻表</a>
+<a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/busunchin/" target="_blank">💴 バス運賃</a>
+<a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus-map/" target="_blank">🗺️ 路線・バス停</a>
+<a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus/file_contents/102512241.pdf" target="_blank">📄 公式バス時刻表 PDF①</a>
+<a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus/file_contents/102512242.pdf" target="_blank">📄 公式バス時刻表 PDF②</a>
+</section>
+
+<section class="section" id="taxi"><h2>🚕 タクシー</h2><h3>久米島タクシー</h3><p>公式サイトから最新の情報をご確認いただけます。</p><a class="btn" href="https://kumetaxi.com/" target="_blank">🚕 久米島タクシー公式サイト</a></section>
+
+<section class="section" id="cycle"><h2>🚲 レンタルサイクル</h2><div class="time">8:00〜18:00</div><ul><li>1時間〜4時間：1,000円</li><li>4時間〜：3,000円</li></ul><h3>ビーチタオルレンタル</h3><p>1枚100円</p></section>
+
+<section class="section" id="hatone"><h2>🏝️ はての浜ツアー</h2><p>はての浜ツアーショップをご案内します。</p>
+<h3>マリンガイド久米島</h3><p>奥の浜へ行きます。スノーケル、SUPツアーもあります。</p><a class="phone" href="tel:09019428997">📞 090-1942-8997</a>
+<h3>久米島エスコートツアーズ</h3><a class="phone" href="tel:0989853311">📞 098-985-3311</a>
+<h3>久米島海洋レジャー</h3><a class="phone" href="tel:0989858779">📞 098-985-8779</a>
+<h3>アイランドエキスパート</h3><a class="phone" href="tel:0989857746">📞 098-985-7746</a>
+<p>※少人数制、プライベート感抜群のツアーショップ情報です。</p></section>
+
+<section class="section" id="activity"><h2>🌅 ENカウンター</h2><h3>サンライズウォーク</h3><p><b>7:00〜</b><br>6:55＠ラウンジ集合</p><p>朝の太陽と潮風を感じながら、イーフビーチの清掃活動。</p><p>※前日17:00までにフロントにてご予約をお願いいたします。</p><p>その他アクティビティや観光案内もお気軽にフロントスタッフへどうぞ。</p></section>
+
+<section class="section" id="map"><h2>📍 館内案内</h2><p>館内案内図を掲載予定です。</p><p>フロント、レストラン、売店、フィットネス、コインランドリー、大浴場などをご案内します。</p></section>
+
+<footer>EN RESORT EEF Beach Hotel<br>Kume Island, Okinawa</footer>
+</main>
 </body>
 </html>
