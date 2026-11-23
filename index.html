@@ -2,16 +2,16 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#ffffff">
 <title>EN RESORT EEF Beach Hotel | Hotel Guide</title>
 <style>
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:#f6f6f4;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7}
 a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 15px}
-header{background:#fff;text-align:center;padding:30px 15px 25px;border-bottom:1px solid #e7e7e7}
-h1{font-family:Georgia,serif;font-size:24px;margin:0;letter-spacing:.02em}.sub{font-size:12px;color:#777}
-.welcome{font-family:Georgia,serif;font-size:21px;margin-top:12px}
+header{background:#fff;text-align:center;padding:30px 15px 24px;border-bottom:1px solid #e7e7e7}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.02em}.sub{font-size:12px;color:#777}.welcome{font-family:Georgia,serif;font-size:21px;margin-top:10px}
+.call{display:block;background:#222;color:#fff;border-radius:12px;padding:11px;margin:15px auto 0;max-width:360px;font-weight:700;font-size:14px;text-align:center}
 .notice{margin:16px 0;background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:15px;font-size:13px}
 .group-title{font-size:14px;font-weight:700;margin:22px 3px 9px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
@@ -22,17 +22,19 @@ h1{font-family:Georgia,serif;font-size:24px;margin:0;letter-spacing:.02em}.sub{f
 .section p,.section li{font-size:13px}.time{display:inline-block;background:#f0f0ed;border-radius:8px;padding:4px 8px;font-size:12px;font-weight:700;margin:2px 3px 6px 0}
 .btn{display:block;background:#f1f1ef;border-radius:10px;padding:10px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
 .phone{display:block;background:#222;color:#fff;border-radius:10px;padding:10px;text-align:center;margin-top:8px}
-ul{padding-left:20px;margin:7px 0}.key{background:#f2f2f2;border-radius:10px;padding:13px;text-align:center;margin:8px 0;font-size:13px}
-.ship{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
+ul{padding-left:20px;margin:7px 0}.key-img,.map-img,.box-img,.gown-img{width:100%;display:block;border-radius:12px;margin:10px 0}.note{background:#f7f7f5;border-radius:10px;padding:10px;font-size:12px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
+.list-card{background:#f8f8f6;border-radius:12px;padding:13px;margin:9px 0}.list-card h3{margin:0 0 4px;font-size:15px}.list-card p{margin:3px 0}
 footer{text-align:center;color:#999;font-size:11px;padding:25px 0 35px}
-@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.ship{grid-template-columns:1fr 1fr}.ship .price:last-child{grid-column:1/-1}}
+@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.price-grid{grid-template-columns:1fr 1fr}.price-grid .price:last-child{grid-column:1/-1}}
 </style>
 </head>
 <body>
 <header>
-<h1>EN RESORT EEF Beach Hotel</h1>
-<div class="sub">Kume Island, Okinawa</div>
-<div class="welcome">ようこそ</div>
+  <div class="logo">EN RESORT EEF Beach Hotel</div>
+  <div class="sub">Kume Island, Okinawa</div>
+  <div class="welcome">ようこそ</div>
+  <a class="call" href="tel:0989857111">📞 フロントに電話　098-985-7111</a>
 </header>
 
 <main class="wrap">
@@ -58,43 +60,63 @@ footer{text-align:center;color:#999;font-size:11px;padding:25px 0 35px}
 <a class="card" href="#shipping"><div class="emoji">📦</div><strong>宅急便・発送</strong><small>着払いのみ</small></a>
 </div>
 
+<div class="group-title">レンタル</div>
+<div class="grid">
+<a class="card" href="#towel"><div class="emoji">🏖️</div><strong>タオル</strong><small>お風呂・ビーチ・プール</small></a>
+<a class="card" href="#activity"><div class="emoji">🌴</div><strong>アクティビティ</strong><small>ホテル内</small></a>
+<a class="card" href="#bicycle"><div class="emoji">🚲</div><strong>自転車</strong><small>料金案内</small></a>
+<a class="card" href="#aim"><div class="emoji">🚗</div><strong>エイム</strong><small>2人乗り電気自動車</small></a>
+<a class="card" href="#free-rental"><div class="emoji">🎲</div><strong>無料レンタル</strong><small>ゲーム・卓球など</small></a>
+</div>
+
 <div class="group-title">交通・移動</div>
 <div class="grid">
-<a class="card" href="#rentalcar"><div class="emoji">🚗</div><strong>レンタカー</strong><small>詳細は準備中</small></a>
+<a class="card" href="#rentalcar"><div class="emoji">🚗</div><strong>レンタカー</strong><small>島内の会社一覧</small></a>
 <a class="card" href="#bus"><div class="emoji">🚌</div><strong>島内バス</strong><small>公式情報</small></a>
-<a class="card" href="#taxi"><div class="emoji">🚕</div><strong>タクシー</strong><small>久米島タクシー</small></a>
-<a class="card" href="#cycle"><div class="emoji">🚲</div><strong>レンタサイクル</strong><small>8:00〜18:00</small></a>
+<a class="card" href="#taxi"><div class="emoji">🚕</div><strong>タクシー</strong><small>共栄・相互</small></a>
+<a class="card" href="#island-cycle"><div class="emoji">🚲</div><strong>島内レンタサイクル</strong><small>各社情報</small></a>
 </div>
 
-<div class="group-title">観光・アクティビティ</div>
+<div class="group-title">観光</div>
 <div class="grid">
-<a class="card" href="#hatone"><div class="emoji">🏝️</div><strong>はての浜観光</strong><small>4社</small></a>
-<a class="card" href="#activity"><div class="emoji">🌅</div><strong>ENカウンター</strong><small>サンライズウォーク</small></a>
+<a class="card" href="#hatone"><div class="emoji">🏝️</div><strong>はての浜</strong><small>4社の案内</small></a>
+<a class="card" href="#en-counter"><div class="emoji">🌅</div><strong>ENカウンター</strong><small>サンライズウォーク</small></a>
 </div>
 
-<div class="group-title">館内案内</div>
+<div class="group-title">医療・困ったとき</div>
 <div class="grid">
+<a class="card" href="#medical"><div class="emoji">🏥</div><strong>病院・医療</strong><small>電話できます</small></a>
 <a class="card" href="#map"><div class="emoji">📍</div><strong>館内マップ</strong><small>館内案内図</small></a>
 </div>
 
-<section class="section" id="checkout"><h2>🕚 チェックアウト</h2><div class="time">11:00まで</div><p>レイトチェックアウトをご希望の際は、フロントスタッフへお尋ねください。</p></section>
-<section class="section" id="wifi"><h2>📶 Wi-Fi</h2><p><b>SSID：</b> enresort</p><p><b>PASS：</b> enhotels</p></section>
-<section class="section" id="breakfast"><h2>🍽️ お食事〈ご朝食〉</h2><div class="time">7:00〜9:00</div><p>最終入店 9:30／閉店</p><h3>THE OCEAN DINING</h3><p>レストランをご利用の際、ガウンとルームスリッパはご遠慮ください。</p><p>朝食は当日の追加も可能です。追加をご希望の方はフロントまでお越しくださいませ。</p></section>
-<section class="section" id="bath"><h2>🛁 2F 展望風呂</h2><div class="time">6:00〜9:00</div><div class="time">14:00〜22:00</div><p>バスタオルなどはお部屋からお持ちください。</p><p>貴重品はお持ちにならず、お部屋のセキュリティボックスをご利用ください。</p><p>ルームスリッパやガウンでのご利用はご遠慮ください。</p></section>
-<section class="section" id="key"><h2>🔑 カードキー</h2><div class="key">女性大浴場専用キー</div><div class="key">男性大浴場専用キー</div><div class="key">客室ルームキー</div><p>※カードキーの写真は後から掲載できます。</p></section>
-<section class="section" id="gown"><h2>👘 ガウン・ルームスリッパ</h2><p>ガウンは客室内にはご用意しておりません。ご利用をご希望のお客様は、フロントにて直接お受け取りください。</p><p><b>ガウン・ルームスリッパは、客室内のみでのご利用をお願いいたします。</b></p><p>レストラン・大浴場など館内施設をご利用の際は、ガウン・ルームスリッパのままでのご利用はご遠慮ください。</p></section>
-<section class="section" id="eco"><h2>🌿 エコ清掃</h2><h3>清掃が不要の場合</h3><p>使用済みのタオルやゴミ等を廊下にお出しください。スタッフが回収し、新しいタオルと、売店のアイスやオリオンの発泡酒と交換できるチケットをお部屋にお入れします。</p><h3>清掃が必要な場合</h3><p><b>朝9:00までに</b>、客室ドアの外側にある「清掃してください」のマグネットを表に貼ってください。</p></section>
+<section class="section" id="checkout"><h2>🕚 チェックアウト</h2><div class="time">通常：11:00まで</div><p><b>レイトチェックアウト：1名 1,100円／＋1時間まで</b></p><p>ご希望の際はフロントスタッフへお尋ねください。</p></section>
+<section class="section" id="wifi"><h2>📶 Wi-Fi</h2><p><b>SSID：</b> enresort</p><p><b>PASS：</b> enhotels</p><p class="note">Wi-Fi接続用QRコードは館内に設置している既存のものをご利用ください。</p></section>
+<section class="section" id="breakfast"><h2>🍽️ 朝食・レストラン</h2><h3>THE OCEAN DINING</h3><div class="time">最終入店：9:00</div><div class="time">クローズ：9:30</div><p><b>当日のご利用も可能です。</b></p><p>朝食の追加をご希望の場合はフロントまでお越しください。</p><p>レストランをご利用の際は、ガウン・ルームスリッパでのご利用はご遠慮ください。</p></section>
+<section class="section" id="bath"><h2>🛁 2F 展望風呂</h2><div class="time">6:00〜9:00</div><div class="time">14:00〜22:00</div><p>タオルはお部屋からお持ちいただけます。<b>フロントにもタオルをご用意しています。</b></p><p>貴重品はお持ちにならず、お部屋のセキュリティボックスをご利用ください。</p><p>ガウン・ルームスリッパでのご利用はご遠慮ください。</p></section>
+<section class="section" id="key"><h2>🔑 カードキーのご案内</h2><img class="key-img" src="images/カードキー.png" alt="ホテルカードキーの案内"><p>女性大浴場専用キー、男性大浴場専用キー、客室ルームキーをご確認ください。</p></section>
+<section class="section" id="gown"><h2>👘 ガウン・ルームスリッパ</h2><img class="gown-img" src="images/ガウン.png" alt="ガウンの案内"><p>ガウンは客室内にはご用意しておりません。ご利用をご希望のお客様は、フロントにて直接お受け取りください。</p><p><b>ガウン・ルームスリッパは、客室内のみでのご利用をお願いいたします。</b></p></section>
+<section class="section" id="eco"><h2>🌿 エコ清掃</h2><h3>清掃が不要の場合</h3><p>使用済みのタオルやゴミ等を廊下にお出しください。スタッフが回収し、新しいタオルとチケットをお部屋にお入れします。</p><p>チケットは、<b>売店の対象商品をフロントへお持ちいただき、交換</b>してください。</p><ul><li>売店のアイス</li><li>オリオンの発泡酒</li></ul><h3>清掃が必要な場合</h3><p><b>朝9:00までに</b>、客室ドアの外側にある「清掃してください」のマグネットを表に貼ってください。</p></section>
 
 <section class="section" id="shop"><h2>🏪 売店</h2><div class="time">7:00〜22:00</div><p>お支払いはフロント横のレジへ。</p></section>
 <section class="section" id="laundry"><h2>🧺 コインランドリー</h2><div class="time">24時間</div><ul><li>洗濯機（8台）：1回300円</li><li>乾燥機（8台）：40分100円</li></ul><p>洗剤は自動投入されません。売店・フロントにて1個60円で販売しています。</p><p>脱水機のみの設置はございません。</p></section>
-<section class="section" id="fitness"><h2>🏋️ フィットネスジム</h2><div class="time">6:00〜21:00</div></section>
+<section class="section" id="fitness"><h2>🏋️ フィットネスジム</h2><div class="time">6:00〜21:00</div><p>宿泊者は予約なしでご利用いただけます。</p><p>通常の靴でご利用いただけます。</p></section>
 <section class="section" id="pool"><h2>🏊 プール</h2><p><b>営業期間：4月〜10月末</b></p><p>天候等の状況により変更となる場合がございます。</p></section>
 
-<section class="section" id="shipping"><h2>📦 宅急便・発送</h2><h3>取扱い</h3><ul><li>クロネコヤマト</li><li>ゆうパック</li></ul><p><b>着払いのみ</b>となります。</p><h3>📦 発送用ダンボール</h3><div class="ship"><div class="price"><b>80サイズ</b><span>280円</span></div><div class="price"><b>100サイズ</b><span>320円</span></div><div class="price"><b>120サイズ</b><span>340円</span></div></div><p>箱代のお支払いは現金のみです。</p><h3>🤿 ダイビング機材</h3><p>ダイビング機材の場合は専用の送り状がありますので、スタッフまでお申し出ください。</p></section>
+<section class="section" id="towel"><h2>🏖️ タオル</h2><p>🛁 お風呂用タオル：<b>無料</b></p><p>🏖️ ビーチ・プール用タオル：<b>1枚100円</b></p></section>
+<section class="section" id="activity"><h2>🌴 アクティビティ</h2><p>ホテルでご利用いただけるアクティビティです。</p><div class="list-card"><h3>⛳ スナックゴルフ</h3><p><b>1人 500円</b></p></div><div class="list-card"><h3>🎾 ビーチテニス</h3><p><b>1時間 500円</b></p></div><div class="list-card"><h3>🪵 モルック</h3><p><b>1時間 500円</b></p></div><div class="list-card"><h3>🏐 ビーチバレー</h3><p><b>1時間 500円</b></p></div></section>
+<section class="section" id="bicycle"><h2>🚲 自転車</h2><div class="price-grid"><div class="price"><b>0〜1時間</b><span>無料</span></div><div class="price"><b>1〜4時間</b><span>2,000円</span></div><div class="price"><b>4時間以上</b><span>3,000円</span></div></div></section>
+<section class="section" id="aim"><h2>🚗 エイム</h2><p><b>2人乗りの電気自動車</b></p><div class="price-grid"><div class="price"><b>2時間</b><span>4,400円</span></div><div class="price"><b>4時間</b><span>6,600円</span></div><div class="price"><b>6時間</b><span>8,800円</span></div></div></section>
+<section class="section" id="free-rental"><h2>🎲 無料レンタル</h2><p>無料でご利用いただけます。</p><ul><li>トランプ</li><li>UNO</li><li>音速飯店</li><li>カタカナーシ</li><li>HALLI GALLI</li><li>けん玉</li><li>卓球</li></ul></section>
 
-<section class="section" id="rentalcar"><h2>🚗 レンタカー</h2><p>レンタカー情報は今後追加予定です。</p></section>
+<section class="section" id="rentalcar"><h2>🚗 レンタカー</h2><p>久米島のレンタカー会社をご案内します。料金は資料に記載がないため、各社へお問い合わせください。</p>
+<div class="list-card"><h3>オリックスレンタカー</h3><p>📞 098-985-5151</p><p>8:00〜19:00</p><p>空港送迎可／乗り捨て可（要連絡・別途有料1,100円）／全車禁煙</p><a class="phone" href="tel:0989855151">電話する</a></div>
+<div class="list-card"><h3>イーストレンタカー</h3><p>📞 098-896-7766</p><p>8:00〜19:00</p><p>送迎可／乗り捨て可（空港のみ）</p><a class="phone" href="tel:0988967766">電話する</a></div>
+<div class="list-card"><h3>島レンタカー</h3><p>📞 070-5271-7631</p><p>8:30〜20:00</p><p>送迎可（状況を見て対応）／乗り捨て可</p><a class="phone" href="tel:07052717631">電話する</a></div>
+<div class="list-card"><h3>マングローブレンタカー</h3><p>📞 098-985-4680</p><p>8:30〜19:00</p><p>乗り捨て一部可（空港のみ）／全車禁煙</p><a class="phone" href="tel:0989854680">電話する</a></div>
+<div class="list-card"><h3>久米島レンタカー（カースタレンタカー）</h3><p>📞 080-6483-7127</p><p>8:30〜18:00</p><p>送迎可（兼城港〜空港）／乗り捨て可（兼城港・空港）／全車禁煙</p><a class="phone" href="tel:08064837127">電話する</a></div>
+</section>
 
-<section class="section" id="bus"><h2>🚌 久米島島内バス</h2><p>久米島町公式の情報をご確認いただけます。</p>
+<section class="section" id="bus"><h2>🚌 久米島島内バス</h2><p><b>ホテル前</b>が最寄りのバス停です。ホテル入口付近に停車します。</p><p class="note"><b>⚠️ バスをご利用の際は、必ずホテルの外に出て、バスから見える場所でお待ちください。ホテル内にいると、そのまま通過する場合があります。</b></p>
 <a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus/timeline.html" target="_blank">🕐 バス時刻表</a>
 <a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/busunchin/" target="_blank">💴 バス運賃</a>
 <a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus-map/" target="_blank">🗺️ 路線・バス停</a>
@@ -102,22 +124,26 @@ footer{text-align:center;color:#999;font-size:11px;padding:25px 0 35px}
 <a class="btn" href="https://www.town.kumejima.okinawa.jp/docs/bus/file_contents/102512242.pdf" target="_blank">📄 公式バス時刻表 PDF②</a>
 </section>
 
-<section class="section" id="taxi"><h2>🚕 タクシー</h2><h3>久米島タクシー</h3><p>公式サイトから最新の情報をご確認いただけます。</p><a class="btn" href="https://kumetaxi.com/" target="_blank">🚕 久米島タクシー公式サイト</a></section>
+<section class="section" id="taxi"><h2>🚕 タクシー</h2><div class="list-card"><h3>共栄タクシー</h3><p>📞 098-985-2634</p><a class="phone" href="tel:0989852634">電話する</a></div><div class="list-card"><h3>相互タクシー</h3><p>📞 098-985-2095</p><a class="phone" href="tel:0989852095">電話する</a></div></section>
 
-<section class="section" id="cycle"><h2>🚲 レンタルサイクル</h2><div class="time">8:00〜18:00</div><ul><li>1時間〜4時間：1,000円</li><li>4時間〜：3,000円</li></ul><h3>ビーチタオルレンタル</h3><p>1枚100円</p></section>
+<section class="section" id="island-cycle"><h2>🚲 島内レンタサイクル</h2><p>島内のレンタサイクル情報です。ホテルの自転車とは別のサービスも含みます。</p><div class="list-card"><h3>アイランドエキスパート</h3><p>📞 098-985-7746</p><p>9:00〜18:00</p><p>ママチャリ・子供用自転車／1,000円（2時間）／1,500円（4時間）</p></div><div class="list-card"><h3>ウォーターマークホテル沖縄久米アイランド</h3><p>📞 098-985-8001</p><p>9:00〜18:00</p><p>電動自転車：3,500円（4時間）・4,000円（1日）</p><p>ミニベロ：2,500円（4時間）・3,500円（1日）／要予約</p></div><p class="note">その他の事業者については、島内レンタサイクル資料をご確認ください。</p></section>
 
-<section class="section" id="hatone"><h2>🏝️ はての浜ツアー</h2><p>はての浜ツアーショップをご案内します。</p>
-<h3>マリンガイド久米島</h3><p>奥の浜へ行きます。スノーケル、SUPツアーもあります。</p><a class="phone" href="tel:09019428997">📞 090-1942-8997</a>
-<h3>久米島エスコートツアーズ</h3><a class="phone" href="tel:0989853311">📞 098-985-3311</a>
-<h3>久米島海洋レジャー</h3><a class="phone" href="tel:0989858779">📞 098-985-8779</a>
-<h3>アイランドエキスパート</h3><a class="phone" href="tel:0989857746">📞 098-985-7746</a>
-<p>※少人数制、プライベート感抜群のツアーショップ情報です。</p></section>
+<section class="section" id="hatone"><h2>🏝️ はての浜</h2><p>はての浜ツアーショップをご案内します。</p>
+<div class="list-card"><h3>マリンガイド久米島</h3><p>奥の浜へ行きます。スノーケル、SUPツアーもあります。</p><p>📞 090-1942-8997</p><a class="phone" href="tel:09019428997">電話する</a></div>
+<div class="list-card"><h3>久米島エスコートツアーズ</h3><p>📞 098-985-3311</p><a class="phone" href="tel:0989853311">電話する</a></div>
+<div class="list-card"><h3>久米島海洋レジャー</h3><p>📞 098-985-8779</p><a class="phone" href="tel:0989858779">電話する</a></div>
+<div class="list-card"><h3>アイランドエキスパート</h3><p>📞 098-985-7746</p><a class="phone" href="tel:0989857746">電話する</a></div>
+</section>
 
-<section class="section" id="activity"><h2>🌅 ENカウンター</h2><h3>サンライズウォーク</h3><p><b>7:00〜</b><br>6:55＠ラウンジ集合</p><p>朝の太陽と潮風を感じながら、イーフビーチの清掃活動。</p><p>※前日17:00までにフロントにてご予約をお願いいたします。</p><p>その他アクティビティや観光案内もお気軽にフロントスタッフへどうぞ。</p></section>
+<section class="section" id="en-counter"><h2>🌅 ENカウンター</h2><h3>サンライズウォーク</h3><p><b>7:00〜／6:55 ラウンジ集合</b></p><p>朝の太陽と潮風を感じながら、イーフビーチの清掃活動。</p><p>※前日17:00までにフロントにてご予約をお願いいたします。</p><p>その他アクティビティや観光案内もお気軽にフロントスタッフへどうぞ。</p></section>
 
-<section class="section" id="map"><h2>📍 館内案内</h2><p>館内案内図を掲載予定です。</p><p>フロント、レストラン、売店、フィットネス、コインランドリー、大浴場などをご案内します。</p></section>
+<section class="section" id="shipping"><h2>📦 宅急便・発送</h2><p>取扱い：クロネコヤマト／ゆうパック</p><p><b>着払いのみ</b></p><h3>発送用ダンボール</h3><img class="box-img" src="images/発送用ダンボール.png" alt="発送用ダンボール見本"><div class="price-grid"><div class="price"><b>80サイズ</b><span>280円</span></div><div class="price"><b>100サイズ</b><span>320円</span></div><div class="price"><b>120サイズ</b><span>340円</span></div></div><p>箱代のお支払いは現金のみです。</p><p><b>ダイビング機材の場合は専用の送り状がありますので、スタッフまでお申し出ください。</b></p></section>
 
-<footer>EN RESORT EEF Beach Hotel<br>Kume Island, Okinawa</footer>
+<section class="section" id="medical"><h2>🏥 病院・医療</h2><div class="list-card"><h3>久美の島診療所</h3><p>📞 098-896-8036</p><a class="phone" href="tel:0988968036">電話する</a></div><div class="list-card"><h3>久米島公立病院</h3><p>📞 098-985-5555</p><a class="phone" href="tel:0989855555">電話する</a></div></section>
+
+<section class="section" id="map"><h2>📍 館内案内</h2><img class="map-img" src="images/館内案内図.png" alt="EN RESORT EEF Beach Hotel 館内案内図"></section>
+
+<footer>EN RESORT EEF Beach Hotel<br>Kume Island, Okinawa<br><a href="tel:0989857111">📞 098-985-7111</a></footer>
 </main>
 </body>
 </html>
