@@ -6,57 +6,89 @@
 <meta name="theme-color" content="#ffffff">
 <title>Bicycle Rentals | EN RESORT EEF Beach Hotel | Hotel Guide</title>
 <style>
+:root{--sea:#0d6b78;--sea2:#2b9fb0;--sea-l:#e7f3f4;--sand:#f6f1e8;--ink:#1f2a2e;--mute:#6b7a7f;--line:#e6ebec}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:#f6f6f4;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7}
-a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 15px}
-header{background:#fff;text-align:center;padding:30px 58px 24px;border-bottom:1px solid #e7e7e7}
-.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.02em}.sub{font-size:12px;color:#777}.welcome{font-family:Georgia,serif;font-size:21px;margin-top:10px}
-.call{display:block;background:#222;color:#fff;border-radius:12px;padding:11px;margin:15px auto 0;max-width:360px;font-weight:700;font-size:15px;text-align:center}
-.ext{font-size:13px;color:#555;margin-top:8px}.ext b{font-size:15px;color:#222}
-.lang{display:inline-block;margin-top:10px;font-size:12px;border:1px solid #ccc;border-radius:20px;padding:3px 12px;color:#555}
-.notice{margin:16px 0;background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:15px;font-size:13px}
-.group-title{font-size:14px;font-weight:700;margin:22px 3px 9px}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 16px}
+header{position:relative;background:linear-gradient(160deg,#0a4f5a 0%,var(--sea) 45%,var(--sea2) 100%);color:#fff;text-align:center;padding:44px 58px 64px;overflow:hidden}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:38px;background:var(--sand);
+-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C240 80 480 0 720 30 C960 60 1200 10 1440 40 L1440 80 L0 80Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C240 80 480 0 720 30 C960 60 1200 10 1440 40 L1440 80 L0 80Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.logo{font-family:"Didot","Bodoni 72",Georgia,serif;font-size:25px;letter-spacing:.06em;line-height:1.3}
+.sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;opacity:.8;margin-top:6px}
+.welcome{font-family:"Hiragino Mincho ProN","Yu Mincho",Georgia,serif;font-size:20px;margin-top:14px;letter-spacing:.15em}
+.call{display:block;background:#fff;color:var(--sea);border-radius:999px;padding:12px;margin:18px auto 0;max-width:300px;font-weight:700;font-size:17px;text-align:center;letter-spacing:.04em;box-shadow:0 6px 18px #0003}
+.ext{font-size:13px;margin-top:10px;opacity:.95}.ext b{font-size:16px}
+.lang{display:inline-block;margin-top:12px;font-size:12px;border:1px solid #ffffff80;border-radius:999px;padding:3px 14px}
+.notice{margin:6px 0 16px;background:#fff;border-radius:18px;padding:16px 18px;font-size:13px;box-shadow:0 4px 16px #0d6b7810}
+.notice b{color:var(--sea);letter-spacing:.12em;font-size:12px}
+.group-title{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--sea);letter-spacing:.08em;margin:26px 2px 10px}
+.group-title::after{content:"";flex:1;height:1px;background:#0d6b7833}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.card{background:#fff;border:1px solid #e7e7e7;border-radius:15px;padding:15px;min-height:88px;box-shadow:0 2px 8px #00000008}
-.card:active{transform:scale(.98)}.emoji{font-size:25px}.card strong{display:block;font-size:14px;line-height:1.4}.card small{display:block;color:#777;font-size:10px}
-.section{background:#fff;border:1px solid #e7e7e7;border-radius:17px;margin:12px 0;padding:18px;scroll-margin-top:10px}
-.section h2{font-size:19px;margin:0 0 11px}.section h3{font-size:14px;margin:16px 0 5px}
-.section p,.section li{font-size:13px}.time{display:inline-block;background:#f0f0ed;border-radius:8px;padding:4px 8px;font-size:12px;font-weight:700;margin:2px 3px 6px 0}
-.btn{display:block;background:#f1f1ef;border-radius:10px;padding:10px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
-.btn-dark{display:block;background:#222;color:#fff;border-radius:12px;padding:12px;margin:14px 0 4px;text-align:center;font-size:14px;font-weight:700}
-.phone{display:block;background:#222;color:#fff;border-radius:10px;padding:10px;text-align:center;margin-top:8px}
-ul{padding-left:20px;margin:7px 0}.key-img,.map-img,.box-img{width:100%;display:block;border-radius:12px;margin:10px 0}.note{background:#f7f7f5;border-radius:10px;padding:10px;font-size:12px}
-.small-note{font-size:12px!important;color:#666}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price-grid.four{grid-template-columns:repeat(2,1fr)}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
-.price-grid.four .price b{font-size:13px}.price-grid.four .price span{font-size:15px;font-weight:700}
-.list-card{background:#f8f8f6;border-radius:12px;padding:13px;margin:9px 0}.list-card h3{margin:0 0 4px;font-size:15px}.list-card p{margin:3px 0}
-.back{display:inline-block;margin:16px 3px 0;font-size:13px;color:#555}
-.page-title{font-size:21px;margin:18px 3px 4px}
-footer{text-align:center;color:#999;font-size:11px;padding:25px 0 90px}
-/* menu */
-.menu-btn{position:fixed;top:12px;right:12px;z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid #e0e0e0;background:#fffffff0;box-shadow:0 2px 10px #0000001a;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
-.menu-btn span{display:block;width:20px;height:2px;background:#222;border-radius:2px;transition:.25s}
+.card{background:#fff;border-radius:18px;padding:14px;min-height:92px;box-shadow:0 3px 12px #0d6b780f;transition:transform .15s}
+.card:active{transform:scale(.97)}
+.emoji{width:40px;height:40px;border-radius:12px;background:var(--sea-l);display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:8px}
+.card strong{display:block;font-size:14px;line-height:1.4}.card small{display:block;color:var(--mute);font-size:10.5px;margin-top:2px;line-height:1.4}
+.section{background:#fff;border-radius:20px;margin:14px 0;padding:20px 18px;scroll-margin-top:12px;box-shadow:0 3px 14px #0d6b780d}
+.section h2{font-size:18px;margin:0 0 12px;padding-bottom:10px;border-bottom:2px solid var(--sea-l);line-height:1.4}
+.section h3{font-size:14px;margin:18px 0 6px;color:var(--sea);border-left:3px solid var(--sea2);padding-left:8px;line-height:1.4}
+.section p,.section li{font-size:13.5px}.section p{margin:6px 0}
+.time{display:inline-block;background:var(--sea-l);color:var(--sea);border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:700;margin:2px 4px 6px 0}
+.btn{display:block;background:var(--sea-l);color:var(--sea);border-radius:12px;padding:11px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
+.btn-dark{display:block;background:var(--sea);color:#fff;border-radius:999px;padding:13px;margin:16px 0 4px;text-align:center;font-size:14px;font-weight:700;box-shadow:0 4px 14px #0d6b7840}
+.phone{display:block;background:var(--sea);color:#fff;border-radius:999px;padding:10px;text-align:center;margin-top:10px;font-weight:700;font-size:14px}
+ul{padding-left:20px;margin:7px 0}li{margin:3px 0}li::marker{color:var(--sea2)}
+.key-img,.map-img,.box-img{width:100%;display:block;border-radius:14px;margin:10px 0}
+.note{background:#fbf7ef;border-left:3px solid #e0b860;border-radius:8px;padding:10px 12px;font-size:12.5px!important}
+.small-note{font-size:12px!important;color:var(--mute)}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:6px 0}.price-grid.four{grid-template-columns:repeat(2,1fr)}.price-grid.one{grid-template-columns:1fr;max-width:200px}
+.price{background:var(--sand);border-radius:14px;text-align:center;padding:10px 4px}.price b{display:block;font-size:12px;color:var(--mute);font-weight:600}.price span{font-size:17px;font-weight:700;color:var(--ink)}
+.list-card{background:#f8fafa;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}.list-card h3{margin:0 0 4px;font-size:15px;color:var(--ink);border:0;padding:0}.list-card p{margin:3px 0}
+.fold{background:#f8fafa;border:1px solid var(--line);border-radius:14px;margin:8px 0;overflow:hidden}
+.fold summary{list-style:none;cursor:pointer;padding:13px 44px 13px 14px;font-size:15px;font-weight:700;position:relative}
+.fold summary::-webkit-details-marker{display:none}
+.fold summary::after{content:"";position:absolute;right:16px;top:50%;width:8px;height:8px;border-right:2px solid var(--sea);border-bottom:2px solid var(--sea);transform:translateY(-70%) rotate(45deg);transition:.2s}
+.fold[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+.fold[open] summary{color:var(--sea)}
+.fold-body{padding:0 14px 14px}.fold-body p{margin:3px 0}
+.items{display:grid;gap:8px;margin:8px 0}
+.item{display:flex;align-items:center;gap:12px;background:#f8fafa;border:1px solid var(--line);border-radius:14px;padding:12px}
+.item-ic{flex:none;width:42px;height:42px;border-radius:12px;background:var(--sea-l);display:flex;align-items:center;justify-content:center;font-size:22px}
+.item-tx{flex:1;min-width:0}.item-tx strong{display:block;font-size:14px;line-height:1.4}.item-tx small{display:block;font-size:11.5px;color:var(--mute);line-height:1.5;margin-top:2px}
+.item-pr{flex:none;text-align:right;font-weight:700;font-size:15px;color:var(--sea);line-height:1.3}.item-pr span{font-size:10px;color:var(--mute);font-weight:600}
+.pins{display:flex;flex-direction:column;align-items:center;gap:6px;background:linear-gradient(#e9f4e4,#dcebd3);border-radius:16px;padding:18px 10px 14px;margin:10px 0}
+.pins .row{display:flex;gap:6px}
+.pin{width:38px;height:38px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f3dcb2,#d2a669);border:2px solid #a87b40;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#5a3c16}
+.pins .line{margin-top:12px;width:85%;border-top:2px dashed #7a9a6e;text-align:center;font-size:11px;color:#4d6b42;padding-top:4px}
+.step{counter-increment:st;position:relative;padding-left:36px;margin:12px 0}
+.step::before{content:counter(st);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--sea);color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.steps{counter-reset:st}.step>b{display:block;font-size:14px}.step p{margin:2px 0!important}
+.score{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0}.score div{background:var(--sand);border-radius:14px;padding:12px;text-align:center;font-size:12.5px}.score b{display:block;font-size:14px;color:var(--sea);margin-bottom:4px}
+.back{display:inline-block;margin:6px 2px 0;font-size:13px;color:var(--sea);font-weight:700}
+.page-title{font-size:21px;margin:12px 2px 4px}
+footer{text-align:center;color:var(--mute);font-size:11px;padding:28px 0 90px;letter-spacing:.05em}
+.menu-btn{position:fixed;top:12px;right:12px;z-index:30;width:46px;height:46px;border-radius:50%;border:0;background:#fffffff2;box-shadow:0 3px 12px #0003;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--sea);border-radius:2px;transition:.25s}
 .menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
 .menu-open .menu-btn span:nth-child(2){opacity:0}
 .menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-.overlay{position:fixed;inset:0;background:#0006;z-index:20;opacity:0;pointer-events:none;transition:.25s}
+.overlay{position:fixed;inset:0;background:#0a2a3066;z-index:20;opacity:0;pointer-events:none;transition:.25s}
 .menu-open .overlay{opacity:1;pointer-events:auto}
 .drawer{position:fixed;top:0;right:0;bottom:0;width:min(82vw,320px);background:#fff;z-index:25;transform:translateX(100%);transition:.25s;overflow-y:auto;padding:70px 18px 30px;-webkit-overflow-scrolling:touch}
 .menu-open .drawer{transform:none}
 .menu-open{overflow:hidden}
-.drawer .d-group{font-size:11px;font-weight:700;color:#999;margin:16px 0 4px;letter-spacing:.05em}
-.drawer a{display:block;font-size:14px;padding:8px 4px;border-bottom:1px solid #f0f0f0}
-.drawer .d-lang{margin-top:20px;text-align:center;border:1px solid #ccc;border-radius:20px;padding:7px;font-size:13px}
-/* page top */
-.pagetop{position:fixed;right:14px;bottom:18px;z-index:15;width:48px;height:48px;border-radius:50%;background:#222;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;line-height:1.1;box-shadow:0 3px 12px #0003;opacity:0;pointer-events:none;transition:.25s}
-.pagetop.show{opacity:1;pointer-events:auto}.pagetop i{font-style:normal;font-size:16px}
-@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.price-grid{grid-template-columns:1fr 1fr}.price-grid .price:last-child{grid-column:1/-1}.price-grid.four .price:last-child{grid-column:auto}}
+.drawer .d-group{font-size:11px;font-weight:700;color:var(--sea);margin:18px 0 4px;letter-spacing:.1em}
+.drawer a{display:block;font-size:14px;padding:9px 4px;border-bottom:1px solid #f0f3f3}
+.drawer .d-lang{margin-top:22px;text-align:center;border:1px solid var(--sea);color:var(--sea);border-radius:999px;padding:8px;font-size:13px;font-weight:700}
+.pagetop{position:fixed;right:14px;bottom:18px;z-index:15;width:50px;height:50px;border-radius:50%;background:var(--sea);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;font-weight:700;line-height:1.1;box-shadow:0 4px 14px #0d6b7860;opacity:0;pointer-events:none;transition:.25s}
+.pagetop.show{opacity:1;pointer-events:auto}.pagetop i{font-style:normal;font-size:14px}
+@media(max-width:420px){.grid{gap:9px}.card{padding:13px}.price-grid{grid-template-columns:1fr 1fr}.price-grid .price:last-child{grid-column:1/-1}.price-grid.four .price:last-child{grid-column:auto}}
 </style>
 </head>
 <body>
 <button class="menu-btn" type="button" aria-label="Menu" aria-controls="drawer" aria-expanded="false"><span></span><span></span><span></span></button>
 <div class="overlay"></div>
-<nav class="drawer" id="drawer" aria-label="Menu"><a href="index_en.html#top">🏠 Top</a><div class="d-group">During Your Stay</div><a href="index_en.html#checkout">🕚 Check-out</a><a href="index_en.html#wifi">📶 Wi-Fi</a><a href="index_en.html#breakfast">🍽️ Breakfast & Restaurant</a><a href="index_en.html#bath">🛁 Public Bath</a><a href="index_en.html#key">🔑 Card Keys</a><a href="index_en.html#roomwear">👘 Loungewear & Slippers</a><a href="index_en.html#eco">🌿 Room Cleaning for Multi-night Stays (Eco)</a><div class="d-group">Hotel Services</div><a href="index_en.html#shop">🏪 Shop</a><a href="index_en.html#laundry">🧺 Coin Laundry</a><a href="index_en.html#fitness">🏋️ Fitness Gym</a><a href="index_en.html#pool">🏊 Pool</a><a href="index_en.html#shipping">📦 Shipping</a><div class="d-group">Rentals</div><a href="index_en.html#towel">🏖️ Towels</a><a href="activity_en.html">🌴 Activities</a><a href="index_en.html#bicycle">🚲 Bicycles</a><a href="index_en.html#aim">🚗 AIM EV</a><a href="index_en.html#free-rental">🎲 Free Rentals</a><div class="d-group">Getting Around</div><a href="index_en.html#rentalcar">🚗 Rental Cars</a><a href="index_en.html#bus">🚌 Island Bus</a><a href="index_en.html#taxi">🚕 Taxis</a><a href="index_en.html#island-cycle">🚲 Bicycle Rentals on the Island</a><div class="d-group">Sightseeing</div><a href="index_en.html#hatone">🏝️ Hatenohama</a><a href="index_en.html#en-counter">🌅 EN Counter</a><div class="d-group">Medical & Help</div><a href="index_en.html#medical">🏥 Hospitals & Clinics</a><a href="index_en.html#map">📍 Floor Map</a><a class="d-lang" href="cycle.html">🌐 日本語</a></nav>
+<nav class="drawer" id="drawer" aria-label="Menu"><a href="index_en.html#top">🏠 Top</a><div class="d-group">During Your Stay</div><a href="index_en.html#checkout">🕚 Check-out</a><a href="index_en.html#wifi">📶 Wi-Fi</a><a href="index_en.html#breakfast">🍽️ Breakfast & Restaurant</a><a href="index_en.html#bath">🛁 Public Bath</a><a href="index_en.html#key">🔑 Card Keys</a><a href="index_en.html#roomwear">👘 Loungewear & Slippers</a><a href="index_en.html#eco">🌿 Room Cleaning for Multi-night Stays (Eco)</a><div class="d-group">Hotel Services</div><a href="index_en.html#shop">🏪 Shop</a><a href="index_en.html#laundry">🧺 Coin Laundry</a><a href="index_en.html#fitness">🏋️ Fitness Gym</a><a href="index_en.html#pool">🏊 Pool</a><a href="index_en.html#shipping">📦 Shipping</a><div class="d-group">Rentals</div><a href="index_en.html#towel">🏖️ Towels</a><a href="index_en.html#activity">🌴 Hotel Activities</a><a href="molkky_en.html" style="padding-left:26px;font-size:13px">📖 How to play Mölkky</a><a href="index_en.html#bicycle">🚲 Bicycles</a><a href="index_en.html#aim">🚗 AIM EV</a><a href="index_en.html#free-rental">🎲 Free Rentals</a><div class="d-group">Getting Around</div><a href="index_en.html#rentalcar">🚗 Rental Cars</a><a href="index_en.html#bus">🚌 Island Bus</a><a href="index_en.html#taxi">🚕 Taxis</a><a href="index_en.html#island-cycle">🚲 Bicycle Rentals on the Island</a><div class="d-group">Sightseeing</div><a href="index_en.html#hatone">🏝️ Hatenohama</a><a href="index_en.html#en-counter">🌅 EN Counter</a><div class="d-group">Medical & Help</div><a href="index_en.html#medical">🏥 Hospitals & Clinics</a><a href="index_en.html#map">📍 Floor Map</a><a class="d-lang" href="cycle.html">🌐 日本語</a></nav>
 <header id="top"><div class="logo">EN RESORT EEF Beach Hotel</div><div class="sub">Kume Island, Okinawa</div><div class="welcome">Welcome</div><a class="call" href="tel:0989857111">📞 098-985-7111</a><div class="ext">From your room: Front Desk <b>ext. 511</b></div><a class="lang" href="cycle.html">🌐 日本語</a></header>
 <main class="wrap">
 <a class="back" href="index_en.html">← Back to Hotel Guide</a>
