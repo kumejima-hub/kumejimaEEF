@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>アクティビティ | EN RESORT EEF Beach Hotel | Hotel Guide</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f6f6f4;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 15px}
+header{background:#fff;text-align:center;padding:30px 58px 24px;border-bottom:1px solid #e7e7e7}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.02em}.sub{font-size:12px;color:#777}.welcome{font-family:Georgia,serif;font-size:21px;margin-top:10px}
+.call{display:block;background:#222;color:#fff;border-radius:12px;padding:11px;margin:15px auto 0;max-width:360px;font-weight:700;font-size:15px;text-align:center}
+.ext{font-size:13px;color:#555;margin-top:8px}.ext b{font-size:15px;color:#222}
+.lang{display:inline-block;margin-top:10px;font-size:12px;border:1px solid #ccc;border-radius:20px;padding:3px 12px;color:#555}
+.notice{margin:16px 0;background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:15px;font-size:13px}
+.group-title{font-size:14px;font-weight:700;margin:22px 3px 9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:15px;padding:15px;min-height:88px;box-shadow:0 2px 8px #00000008}
+.card:active{transform:scale(.98)}.emoji{font-size:25px}.card strong{display:block;font-size:14px;line-height:1.4}.card small{display:block;color:#777;font-size:10px}
+.section{background:#fff;border:1px solid #e7e7e7;border-radius:17px;margin:12px 0;padding:18px;scroll-margin-top:10px}
+.section h2{font-size:19px;margin:0 0 11px}.section h3{font-size:14px;margin:16px 0 5px}
+.section p,.section li{font-size:13px}.time{display:inline-block;background:#f0f0ed;border-radius:8px;padding:4px 8px;font-size:12px;font-weight:700;margin:2px 3px 6px 0}
+.btn{display:block;background:#f1f1ef;border-radius:10px;padding:10px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
+.btn-dark{display:block;background:#222;color:#fff;border-radius:12px;padding:12px;margin:14px 0 4px;text-align:center;font-size:14px;font-weight:700}
+.phone{display:block;background:#222;color:#fff;border-radius:10px;padding:10px;text-align:center;margin-top:8px}
+ul{padding-left:20px;margin:7px 0}.key-img,.map-img,.box-img{width:100%;display:block;border-radius:12px;margin:10px 0}.note{background:#f7f7f5;border-radius:10px;padding:10px;font-size:12px}
+.small-note{font-size:12px!important;color:#666}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price-grid.four{grid-template-columns:repeat(2,1fr)}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
+.price-grid.four .price b{font-size:13px}.price-grid.four .price span{font-size:15px;font-weight:700}
+.list-card{background:#f8f8f6;border-radius:12px;padding:13px;margin:9px 0}.list-card h3{margin:0 0 4px;font-size:15px}.list-card p{margin:3px 0}
+.back{display:inline-block;margin:16px 3px 0;font-size:13px;color:#555}
+.page-title{font-size:21px;margin:18px 3px 4px}
+footer{text-align:center;color:#999;font-size:11px;padding:25px 0 90px}
+/* menu */
+.menu-btn{position:fixed;top:12px;right:12px;z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid #e0e0e0;background:#fffffff0;box-shadow:0 2px 10px #0000001a;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;background:#222;border-radius:2px;transition:.25s}
+.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){opacity:0}
+.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.overlay{position:fixed;inset:0;background:#0006;z-index:20;opacity:0;pointer-events:none;transition:.25s}
+.menu-open .overlay{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(82vw,320px);background:#fff;z-index:25;transform:translateX(100%);transition:.25s;overflow-y:auto;padding:70px 18px 30px;-webkit-overflow-scrolling:touch}
+.menu-open .drawer{transform:none}
+.menu-open{overflow:hidden}
+.drawer .d-group{font-size:11px;font-weight:700;color:#999;margin:16px 0 4px;letter-spacing:.05em}
+.drawer a{display:block;font-size:14px;padding:8px 4px;border-bottom:1px solid #f0f0f0}
+.drawer .d-lang{margin-top:20px;text-align:center;border:1px solid #ccc;border-radius:20px;padding:7px;font-size:13px}
+/* page top */
+.pagetop{position:fixed;right:14px;bottom:18px;z-index:15;width:48px;height:48px;border-radius:50%;background:#222;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;line-height:1.1;box-shadow:0 3px 12px #0003;opacity:0;pointer-events:none;transition:.25s}
+.pagetop.show{opacity:1;pointer-events:auto}.pagetop i{font-style:normal;font-size:16px}
+@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.price-grid{grid-template-columns:1fr 1fr}.price-grid .price:last-child{grid-column:1/-1}.price-grid.four .price:last-child{grid-column:auto}}
+</style>
+</head>
+<body>
+<button class="menu-btn" type="button" aria-label="メニュー" aria-controls="drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+<div class="overlay"></div>
+<nav class="drawer" id="drawer" aria-label="メニュー"><a href="index.html#top">🏠 トップ</a><div class="d-group">宿泊中に確認</div><a href="index.html#checkout">🕚 チェックアウト</a><a href="index.html#wifi">📶 Wi-Fi</a><a href="index.html#breakfast">🍽️ 朝食・レストラン</a><a href="index.html#bath">🛁 大浴場・展望風呂</a><a href="index.html#key">🔑 カードキー</a><a href="index.html#roomwear">👘 館内着・ルームスリッパ</a><a href="index.html#eco">🌿 連泊のお部屋の清掃（エコ清掃）</a><div class="d-group">館内サービス</div><a href="index.html#shop">🏪 売店</a><a href="index.html#laundry">🧺 コインランドリー</a><a href="index.html#fitness">🏋️ フィットネス</a><a href="index.html#pool">🏊 プール</a><a href="index.html#shipping">📦 宅急便・発送</a><div class="d-group">レンタル</div><a href="index.html#towel">🏖️ タオル</a><a href="activity.html">🌴 アクティビティ</a><a href="index.html#bicycle">🚲 自転車</a><a href="index.html#aim">🚗 エイム</a><a href="index.html#free-rental">🎲 無料レンタル</a><div class="d-group">交通・移動</div><a href="index.html#rentalcar">🚗 レンタカー</a><a href="index.html#bus">🚌 島内バス</a><a href="index.html#taxi">🚕 タクシー</a><a href="index.html#island-cycle">🚲 島内レンタサイクル</a><div class="d-group">観光</div><a href="index.html#hatone">🏝️ はての浜</a><a href="index.html#en-counter">🌅 ENカウンター</a><div class="d-group">医療・困ったとき</div><a href="index.html#medical">🏥 病院・医療</a><a href="index.html#map">📍 館内マップ</a><a class="d-lang" href="activity_en.html">🌐 English</a></nav>
+<header id="top"><div class="logo">EN RESORT EEF Beach Hotel</div><div class="sub">Kume Island, Okinawa</div><div class="welcome">ようこそ</div><a class="call" href="tel:0989857111">📞 098-985-7111</a><div class="ext">客室からは フロント内線 <b>511</b></div><a class="lang" href="activity_en.html">🌐 English</a></header>
+<main class="wrap">
+<a class="back" href="index.html">← ホテルガイドトップへ</a>
+<h1 class="page-title">🌴 アクティビティ</h1><section class="section"><p>ホテルでご利用いただけるアクティビティです。お申し込みはフロントまでお越しください。</p><div class="list-card"><h3>⛳ スナックゴルフ</h3><p><b>1人 500円</b></p></div><div class="list-card"><h3>🎾 ビーチテニス</h3><p><b>1時間 500円</b></p></div><div class="list-card"><h3>🪵 モルック</h3><p><b>1時間 500円</b></p></div><div class="list-card"><h3>🏐 ビーチバレー</h3><p><b>1時間 500円</b></p><p>※ボールのみの貸し出しです。</p></div></section>
+<a class="btn" href="index.html">← ホテルガイドトップへ</a>
+<footer>EN RESORT EEF Beach Hotel<br>Kume Island, Okinawa<br><a href="tel:0989857111">📞 098-985-7111</a>　フロント内線 511</footer>
+</main>
+<a class="pagetop" href="#top" aria-label="Page top"><i>▲</i>TOP</a>
+<script>
+(function(){var b=document.body,btn=document.querySelector('.menu-btn');
+function t(o){b.classList.toggle('menu-open',o);btn.setAttribute('aria-expanded',o?'true':'false')}
+btn.addEventListener('click',function(){t(!b.classList.contains('menu-open'))});
+document.querySelector('.overlay').addEventListener('click',function(){t(false)});
+document.querySelectorAll('.drawer a').forEach(function(a){a.addEventListener('click',function(){t(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});
+var p=document.querySelector('.pagetop');
+function s(){p.classList.toggle('show',window.scrollY>300)}window.addEventListener('scroll',s,{passive:true});s();
+p.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});})();
+</script>
+</body>
+</html>

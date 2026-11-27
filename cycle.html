@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>島内レンタサイクル | EN RESORT EEF Beach Hotel | Hotel Guide</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#f6f6f4;color:#222;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans JP","Yu Gothic",sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}.wrap{max-width:720px;margin:auto;padding:0 15px}
+header{background:#fff;text-align:center;padding:30px 58px 24px;border-bottom:1px solid #e7e7e7}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.02em}.sub{font-size:12px;color:#777}.welcome{font-family:Georgia,serif;font-size:21px;margin-top:10px}
+.call{display:block;background:#222;color:#fff;border-radius:12px;padding:11px;margin:15px auto 0;max-width:360px;font-weight:700;font-size:15px;text-align:center}
+.ext{font-size:13px;color:#555;margin-top:8px}.ext b{font-size:15px;color:#222}
+.lang{display:inline-block;margin-top:10px;font-size:12px;border:1px solid #ccc;border-radius:20px;padding:3px 12px;color:#555}
+.notice{margin:16px 0;background:#fff;border:1px solid #e6e6e6;border-radius:16px;padding:15px;font-size:13px}
+.group-title{font-size:14px;font-weight:700;margin:22px 3px 9px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card{background:#fff;border:1px solid #e7e7e7;border-radius:15px;padding:15px;min-height:88px;box-shadow:0 2px 8px #00000008}
+.card:active{transform:scale(.98)}.emoji{font-size:25px}.card strong{display:block;font-size:14px;line-height:1.4}.card small{display:block;color:#777;font-size:10px}
+.section{background:#fff;border:1px solid #e7e7e7;border-radius:17px;margin:12px 0;padding:18px;scroll-margin-top:10px}
+.section h2{font-size:19px;margin:0 0 11px}.section h3{font-size:14px;margin:16px 0 5px}
+.section p,.section li{font-size:13px}.time{display:inline-block;background:#f0f0ed;border-radius:8px;padding:4px 8px;font-size:12px;font-weight:700;margin:2px 3px 6px 0}
+.btn{display:block;background:#f1f1ef;border-radius:10px;padding:10px;margin:8px 0;text-align:center;font-size:13px;font-weight:700}
+.btn-dark{display:block;background:#222;color:#fff;border-radius:12px;padding:12px;margin:14px 0 4px;text-align:center;font-size:14px;font-weight:700}
+.phone{display:block;background:#222;color:#fff;border-radius:10px;padding:10px;text-align:center;margin-top:8px}
+ul{padding-left:20px;margin:7px 0}.key-img,.map-img,.box-img{width:100%;display:block;border-radius:12px;margin:10px 0}.note{background:#f7f7f5;border-radius:10px;padding:10px;font-size:12px}
+.small-note{font-size:12px!important;color:#666}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.price-grid.four{grid-template-columns:repeat(2,1fr)}.price{background:#f3efe8;border-radius:10px;text-align:center;padding:10px 3px}.price b{display:block;font-size:15px}.price span{font-size:11px}
+.price-grid.four .price b{font-size:13px}.price-grid.four .price span{font-size:15px;font-weight:700}
+.list-card{background:#f8f8f6;border-radius:12px;padding:13px;margin:9px 0}.list-card h3{margin:0 0 4px;font-size:15px}.list-card p{margin:3px 0}
+.back{display:inline-block;margin:16px 3px 0;font-size:13px;color:#555}
+.page-title{font-size:21px;margin:18px 3px 4px}
+footer{text-align:center;color:#999;font-size:11px;padding:25px 0 90px}
+/* menu */
+.menu-btn{position:fixed;top:12px;right:12px;z-index:30;width:46px;height:46px;border-radius:50%;border:1px solid #e0e0e0;background:#fffffff0;box-shadow:0 2px 10px #0000001a;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;background:#222;border-radius:2px;transition:.25s}
+.menu-open .menu-btn span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.menu-open .menu-btn span:nth-child(2){opacity:0}
+.menu-open .menu-btn span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+.overlay{position:fixed;inset:0;background:#0006;z-index:20;opacity:0;pointer-events:none;transition:.25s}
+.menu-open .overlay{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(82vw,320px);background:#fff;z-index:25;transform:translateX(100%);transition:.25s;overflow-y:auto;padding:70px 18px 30px;-webkit-overflow-scrolling:touch}
+.menu-open .drawer{transform:none}
+.menu-open{overflow:hidden}
+.drawer .d-group{font-size:11px;font-weight:700;color:#999;margin:16px 0 4px;letter-spacing:.05em}
+.drawer a{display:block;font-size:14px;padding:8px 4px;border-bottom:1px solid #f0f0f0}
+.drawer .d-lang{margin-top:20px;text-align:center;border:1px solid #ccc;border-radius:20px;padding:7px;font-size:13px}
+/* page top */
+.pagetop{position:fixed;right:14px;bottom:18px;z-index:15;width:48px;height:48px;border-radius:50%;background:#222;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;line-height:1.1;box-shadow:0 3px 12px #0003;opacity:0;pointer-events:none;transition:.25s}
+.pagetop.show{opacity:1;pointer-events:auto}.pagetop i{font-style:normal;font-size:16px}
+@media(max-width:420px){.grid{gap:8px}.card{padding:13px}.price-grid{grid-template-columns:1fr 1fr}.price-grid .price:last-child{grid-column:1/-1}.price-grid.four .price:last-child{grid-column:auto}}
+</style>
+</head>
+<body>
+<button class="menu-btn" type="button" aria-label="メニュー" aria-controls="drawer" aria-expanded="false"><span></span><span></span><span></span></button>
+<div class="overlay"></div>
+<nav class="drawer" id="drawer" aria-label="メニュー"><a href="index.html#top">🏠 トップ</a><div class="d-group">宿泊中に確認</div><a href="index.html#checkout">🕚 チェックアウト</a><a href="index.html#wifi">📶 Wi-Fi</a><a href="index.html#breakfast">🍽️ 朝食・レストラン</a><a href="index.html#bath">🛁 大浴場・展望風呂</a><a href="index.html#key">🔑 カードキー</a><a href="index.html#roomwear">👘 館内着・ルームスリッパ</a><a href="index.html#eco">🌿 連泊のお部屋の清掃（エコ清掃）</a><div class="d-group">館内サービス</div><a href="index.html#shop">🏪 売店</a><a href="index.html#laundry">🧺 コインランドリー</a><a href="index.html#fitness">🏋️ フィットネス</a><a href="index.html#pool">🏊 プール</a><a href="index.html#shipping">📦 宅急便・発送</a><div class="d-group">レンタル</div><a href="index.html#towel">🏖️ タオル</a><a href="activity.html">🌴 アクティビティ</a><a href="index.html#bicycle">🚲 自転車</a><a href="index.html#aim">🚗 エイム</a><a href="index.html#free-rental">🎲 無料レンタル</a><div class="d-group">交通・移動</div><a href="index.html#rentalcar">🚗 レンタカー</a><a href="index.html#bus">🚌 島内バス</a><a href="index.html#taxi">🚕 タクシー</a><a href="index.html#island-cycle">🚲 島内レンタサイクル</a><div class="d-group">観光</div><a href="index.html#hatone">🏝️ はての浜</a><a href="index.html#en-counter">🌅 ENカウンター</a><div class="d-group">医療・困ったとき</div><a href="index.html#medical">🏥 病院・医療</a><a href="index.html#map">📍 館内マップ</a><a class="d-lang" href="cycle_en.html">🌐 English</a></nav>
+<header id="top"><div class="logo">EN RESORT EEF Beach Hotel</div><div class="sub">Kume Island, Okinawa</div><div class="welcome">ようこそ</div><a class="call" href="tel:0989857111">📞 098-985-7111</a><div class="ext">客室からは フロント内線 <b>511</b></div><a class="lang" href="cycle_en.html">🌐 English</a></header>
+<main class="wrap">
+<a class="back" href="index.html">← ホテルガイドトップへ</a>
+<h1 class="page-title">🚲 島内レンタサイクル（完全版）</h1><section class="section" id="eef"><h2>🏖️ イーフビーチ周辺</h2><div class="list-card"><h3>アイランドエキスパート</h3><p>📞 098-985-7746</p><p>9:00〜18:00</p><p>ママチャリ：30台／子供用自転車：4台</p><p>1,000円／2時間、1,500円／4時間</p><p>宿泊者以外も貸出可。行ける範囲が決まっている場合、最大4時間のレンタル。イーフエリア、ユイマール館、島の口あたりを推奨。</p><a class="phone" href="tel:0989857746">電話する</a></div><div class="list-card"><h3>久米アイランド</h3><p>📞 098-985-8001</p><p>9:00〜18:00</p><p>電動自転車：4台／ミニベロ（小径自転車）：3台</p><p>電動自転車：3,500円／4時間、4,000円／1日</p><p>ミニベロ：2,500円／4時間、3,500円／1日</p><p>要予約。</p><a class="phone" href="tel:0989858001">電話する</a></div><div class="list-card"><h3>リゾートハウスみなみ</h3><p>📞 098-851-7254</p><p>9:00〜18:00</p><p>シティサイクル：2台</p><p>1,100円／4時間、1,650円／4時間以上〜当日18時まで、2,200円／24時間、2,750円／24時間〜翌日18時</p><a class="phone" href="tel:0988517254">電話する</a></div><div class="list-card"><h3>民宿ふくぎ荘</h3><p>📞 098-985-8622</p><p>9:00〜18:00（冬季 9:00〜17:00）</p><p>シティサイクル：ギア付き10台、ギアなし8台</p><p>300円／1時間（ギア有無に関わらず）</p><p>100円／1時間（全車種・宿泊者特典）</p><a class="phone" href="tel:0989858622">電話する</a></div><div class="list-card"><h3>アースライフマリンクラブ</h3><p>📞 090-8597-6082</p><p>📞 098-8419-6011</p><p>8:00〜20:00</p><p>電動アシスト：4台／クロスバイク＋ギア：2台</p><p>2,500円／6時間、4,000円／1日、3,500円／12時間（車種問わず共通価格）</p><p>日をまたぐレンタルは要相談。電動アシスト貸出時の宿泊先までの送迎は要相談。</p><a class="phone" href="tel:09085976082">電話する</a></div><div class="list-card"><h3>よんなーサイクル</h3><p>📞 080-6485-0265</p><p>9:00〜18:00</p><p>電動アシスト・ママチャリ：6台</p><p>内3台チャイルドシート取付可能</p><p>1,600円／4時間、3,200円／9時間</p><p>ファミリーマートイーフビーチ前店隣り。事前予約が必要。</p><a class="phone" href="tel:08064850265">電話する</a></div></section><section class="section" id="other"><h2>🚲 その他のレンタサイクル</h2><div class="list-card"><h3>久米島空港（JALレンタサイクル）</h3><p>📞 098-857-2111（JALTAセールス）</p><p>9:00〜14:00（最終返却17時）</p><p>クロスバイク：Mサイズ／Sサイズ</p><p>3,000円／1日</p><p>日をまたいでの貸出不可。予約可能。</p><a class="phone" href="tel:0988572111">電話する</a></div><div class="list-card"><h3>サイプレスリゾート久米島</h3><p>📞 098-985-3700</p><p>8:00〜18:00</p><p>電動アシスト：4台</p><p>1,200円／1時間</p><p>宿泊者のみへの貸出。事前予約不可（先着順）。</p><a class="phone" href="tel:0989853700">電話する</a></div><div class="list-card"><h3>ホテルガーデンヒルズ</h3><p>📞 098-985-2117</p><p>日中なら貸出可能</p><p>ママチャリ：5台</p><p>無料</p><p>宿泊者のみへの貸出。</p><a class="phone" href="tel:0989852117">電話する</a></div><div class="list-card"><h3>ゲストハウスみやっち</h3><p>📞 090-7393-2241</p><p>日中なら貸出可能</p><p>ママチャリ：4台（ギア付き）</p><p>1,000円／6時間、2,000円／12時間</p><p>宿泊者以外のお客様にも貸出可能（要事前予約）。</p><a class="phone" href="tel:09073932241">電話する</a></div><div class="list-card"><h3>民宿あみもと</h3><p>📞 098-985-8856</p><p>8:00〜19:00</p><p>ママチャリ：4台</p><p>500円／2時間以内、1,500円／2時間以上</p><p>宿泊者のみ貸出。</p><a class="phone" href="tel:0989858856">電話する</a></div><p class="note">※料金・台数・営業時間等は、掲載資料（2026年5月更新）の記載内容を反映しています。</p></section>
+<a class="btn" href="index.html">← ホテルガイドトップへ</a>
+<footer>EN RESORT EEF Beach Hotel<br>Kume Island, Okinawa<br><a href="tel:0989857111">📞 098-985-7111</a>　フロント内線 511</footer>
+</main>
+<a class="pagetop" href="#top" aria-label="Page top"><i>▲</i>TOP</a>
+<script>
+(function(){var b=document.body,btn=document.querySelector('.menu-btn');
+function t(o){b.classList.toggle('menu-open',o);btn.setAttribute('aria-expanded',o?'true':'false')}
+btn.addEventListener('click',function(){t(!b.classList.contains('menu-open'))});
+document.querySelector('.overlay').addEventListener('click',function(){t(false)});
+document.querySelectorAll('.drawer a').forEach(function(a){a.addEventListener('click',function(){t(false)})});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')t(false)});
+var p=document.querySelector('.pagetop');
+function s(){p.classList.toggle('show',window.scrollY>300)}window.addEventListener('scroll',s,{passive:true});s();
+p.addEventListener('click',function(e){e.preventDefault();window.scrollTo({top:0,behavior:'smooth'})});})();
+</script>
+</body>
+</html>
